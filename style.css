@@ -1,0 +1,214 @@
+/* RESET + FONT */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", Comic Sans, Arial, sans-serif;
+}
+
+html, body {
+  min-height: 100vh;
+
+  /* Gradient tła */
+  background-image:
+    linear-gradient(135deg, rgba(74,18,102,0.95) 0%, rgba(19,84,60,0.95) 50%, rgba(26,77,58,0.95) 100%),
+    linear-gradient(rgba(255,158,61,0.75) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,158,61,0.75) 1px, transparent 1px);
+  background-size: cover, 40px 40px, 40px 40px;
+  background-repeat: no-repeat, repeat, repeat;
+  background-attachment: fixed;
+  color: #ffcc00;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBARY */
+.sidebar {
+  width: 260px;
+  padding: 20px;
+  border: 4px solid black;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.4);
+  margin: 20px;
+}
+
+.sidebar h2, .sidebar h3 {
+  text-shadow: 2px 2px black;
+  margin-bottom: 10px;
+}
+
+.sidebar ul { list-style: none; margin-bottom: 20px; }
+.sidebar li { margin: 8px 0; }
+.sidebar a { color: #ffcc00; text-decoration: none; }
+.sidebar a:hover { color: #ff9e3d; text-decoration: underline; }
+
+/* WRAPPER ŚRODKOWY */
+#wrapper {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 { font-size: 64px; text-shadow: 4px 4px black; }
+p { font-size: 20px; margin: 20px 0; }
+
+/* LINKS */
+.links {
+  margin-top: 60px;
+  background: rgba(0,0,0,0.4);
+  padding: 30px;
+  border: 4px solid black;
+  border-radius: 16px;
+  width: 80%;
+  max-width: 900px;
+}
+
+.links h2 { margin: 30px 0 15px; text-shadow: 2px 2px black; }
+.links ul { list-style: none; }
+.links li { margin: 10px 0; }
+.links a { color: #ffcc00; text-decoration: none; font-size: 18px; }
+.links a:hover { color: #ff9e3d; text-decoration: underline; }
+
+/* COMMUNITY - Discord + GameBanana */
+.community {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0 40px 0;
+}
+
+.community .discord,
+.community .gamebanana-studio {
+  padding: 20px;
+  border: 4px solid black;
+  border-radius: 16px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.community .discord { background: #5865F2; }
+.community .gamebanana-studio { background: #ff9e3d; color: black; font-weight: bold; }
+
+.community a { text-decoration: none; color: inherit; font-size: 18px; }
+
+.community .discord:hover,
+.community .gamebanana-studio:hover { transform: scale(1.05) rotate(-1deg); }
+
+/* LANGUAGE SWITCH */
+.language-switch { margin-bottom: 30px; }
+.language-switch button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-weight: bold;
+  background: rgba(0,0,0,0.4);
+  color: #ffcc00;
+}
+.language-switch button.active { background: #ffcc00; color: black; }
+
+/* RESPONSYWNOŚĆ */
+@media (max-width: 900px) {
+  .layout { flex-direction: column; align-items: center; }
+  .sidebar { width: 90%; margin: 10px 0; }
+  #wrapper { padding: 20px; }
+  .community { flex-direction: column; gap: 15px; }
+  .community .discord,
+  .community .gamebanana-studio { max-width: 90%; }
+}
+
+/* STOPKA SIDEBARÓW */
+.sidebar-footer {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ffcc00;
+  text-align: center;
+}
+
+.sidebar-footer a {
+  color: #ffcc00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.sidebar-footer a:hover {
+  color: #ff9e3d;
+  text-decoration: underline;
+}
+
+/* GLOBALNA STOPKA COPYRIGHT */
+footer#copyright {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 16px;
+  color: #ffcc00;
+  text-shadow: 1px 1px black;
+}
+
+.music-control {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#volume-slider {
+    width: 200px;
+    height: 12px;
+    border-radius: 6px;
+    background: linear-gradient(to right, #6a0dad, #1b5e20);
+    outline: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #ffcc00;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px black;
+}
+
+#volume-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #ffcc00;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px black;
+}
+
+.scroll-update {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.scroll-update span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 10s linear infinite;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0077ff;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
