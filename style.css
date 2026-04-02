@@ -1,0 +1,791 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", Comic Sans, Arial, sans-serif;
+}
+
+:root {
+  --text-main: #ffcc00;
+  --text-accent: #ff9e3d;
+  --panel-bg: rgba(0, 0, 0, 0.4);
+  --border-main: 4px solid black;
+}
+
+html, body {
+  min-height: 100vh;
+
+  background-image:
+    linear-gradient(135deg, rgba(74,18,102,0.95) 0%, rgba(19,84,60,0.95) 50%, rgba(26,77,58,0.95) 100%),
+    linear-gradient(rgba(255,158,61,0.75) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,158,61,0.75) 1px, transparent 1px);
+  background-size: cover, 40px 40px, 40px 40px;
+  background-repeat: no-repeat, repeat, repeat;
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  padding: 20px;
+  border: var(--border-main);
+  border-radius: 16px;
+  background: var(--panel-bg);
+  margin: 20px;
+}
+
+.sidebar h2, .sidebar h3 {
+  text-shadow: 2px 2px black;
+  margin-bottom: 10px;
+}
+
+.sidebar ul { list-style: none; margin-bottom: 20px; }
+.sidebar li { margin: 8px 0; }
+.sidebar a { color: var(--text-main); text-decoration: none; }
+
+#visit-counter {
+    background: var(--panel-bg);
+    border: var(--border-main);
+    border-radius: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+    font-size: 1.1em;
+}
+.sidebar a:hover { color: var(--text-accent); text-decoration: underline; }
+
+#wrapper {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: 0;
+}
+
+h1 { font-size: clamp(38px, 7vw, 64px); text-shadow: 4px 4px black; }
+.section-heading {
+  font-size: clamp(28px, 4.5vw, 42px);
+  text-shadow: 3px 3px black;
+  margin-top: 24px;
+}
+
+.site-logo {
+  display: block;
+  width: min(100%, 1000px);
+  height: auto;
+  margin: 0 auto;
+}
+p { font-size: 20px; margin: 20px 0; }
+
+.links {
+  margin-top: 60px;
+  background: var(--panel-bg);
+  padding: 30px;
+  border: var(--border-main);
+  border-radius: 16px;
+  width: 80%;
+  max-width: 900px;
+  overflow-wrap: anywhere;
+}
+
+.links h2 { margin: 30px 0 15px; text-shadow: 2px 2px black; }
+.links ul { list-style: none; }
+.links li { margin: 10px 0; }
+.links a { color: var(--text-main); text-decoration: none; font-size: 18px; }
+.links a:hover { color: var(--text-accent); text-decoration: underline; }
+
+.community {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px 0 40px 0;
+}
+
+.community .discord,
+.community .gamebanana-studio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  width: 300px;
+  max-width: 300px;
+  padding: 0;
+  border: var(--border-main);
+  border-radius: 16px;
+  text-align: center;
+  background-size: 180% 180%;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .community {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .community .discord,
+  .community .gamebanana-studio {
+    width: calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+
+.community .discord,
+.community .gamebanana-studio,
+.community .zjebapedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  width: 300px;
+  max-width: 300px;
+  margin: 0;
+  border: var(--border-main);
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+  background-size: 180% 180%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.community .discord a,
+.community .gamebanana-studio a,
+.community .zjebapedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-decoration: none;
+  color: black !important;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.community .discord:hover,
+.community .gamebanana-studio:hover,
+.community .zjebapedia:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.42);
+}
+
+.community .discord a:hover,
+.community .gamebanana-studio a:hover,
+.community .zjebapedia:hover {
+  color: black !important;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.community .zjebapedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+  width: 300px;
+  max-width: 300px;
+  padding: 20px;
+  border: var(--border-main);
+  border-radius: 16px;
+  background: linear-gradient(135deg, #fff89f 0%, #ffcc32 100%);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 0;
+}
+
+.community .zjebapedia:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.42);
+}
+
+.community .discord a,
+.community .gamebanana-studio a {
+  height: 100%;
+}
+
+.community .discord {
+  background-image: linear-gradient(135deg, #8ea1ff 0%, #5865f2 45%, #2f3ec9 100%);
+}
+
+.community .gamebanana-studio {
+  background-image: linear-gradient(135deg, #ffe877 0%, #ffb347 42%, #ff7a18 100%);
+  color: black;
+  font-weight: bold;
+}
+
+.community a { text-decoration: none; color: inherit; font-size: 18px; }
+
+.community .discord:hover,
+.community .gamebanana-studio:hover {
+  transform: scale(1.05) rotate(-1deg);
+  background-position: 100% 50%;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.42);
+}
+
+.language-switch { margin-bottom: 30px; }
+.language-switch button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-weight: bold;
+  background: rgba(0,0,0,0.4);
+  color: var(--text-main);
+}
+.language-switch button.active { background: var(--text-main); color: black; }
+
+.sidebar-footer {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid var(--text-main);
+  text-align: center;
+}
+
+.sidebar-footer a {
+  color: var(--text-main);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.sidebar-footer a:hover {
+  color: var(--text-accent);
+  text-decoration: underline;
+}
+
+footer#copyright {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 16px;
+  color: var(--text-main);
+  text-shadow: 1px 1px black;
+}
+
+.music-control {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#volume-slider {
+    width: 200px;
+    height: 12px;
+    border-radius: 6px;
+    background: linear-gradient(to right, #6a0dad, #1b5e20);
+    outline: none;
+  appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #ffcc00;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px black;
+}
+
+#volume-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #ffcc00;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px black;
+}
+
+.scroll-update {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.scroll-update span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 10s linear infinite;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0077ff;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.community-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.community-gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.zjebapedia {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 20px 25px;
+  background: linear-gradient(135deg, #ffd85f, #f6b64b);
+  border: var(--border-main);
+  border-radius: 16px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+}
+
+.zjebapedia:hover {
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+.community-gallery img:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6); 
+  z-index: 10; 
+  transform: scale(1.1) rotate(-1deg); 
+}
+
+.lang-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.lang-switch button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.oc-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.oc-gallery img {
+  width: 700px;          
+  height: auto;          
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.oc-gallery img:hover {
+  transform: scale(1.1);                 
+  box-shadow: 0 10px 25px rgba(0,0,0,0.7); 
+  z-index: 10;
+}
+
+.site-created {
+    margin-top: 6px;
+    font-size: 0.85em;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  margin: 12px 20px 0;
+}
+
+.footer-links .site-button {
+  width: min(10px, 100%);
+  margin-top: 0;
+}
+
+.footer-links .secret-teaser {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  min-height: 20px;
+  pointer-events: auto;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0;
+  filter: none;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background:
+    linear-gradient(135deg, rgba(25, 25, 25, 0.82), rgba(10, 10, 10, 0.92)),
+    repeating-linear-gradient(90deg, rgba(255, 204, 0, 0.08) 0 1px, transparent 1px 10px);
+  color: transparent;
+  border: 0;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.footer-links .secret-teaser:hover,
+.footer-links .secret-teaser:active {
+  transform: none;
+  filter: none;
+}
+
+.site-button {
+    display: block;
+    text-align: center;
+    padding: 14px 18px;
+    margin-top: 14px;
+
+    background:
+        linear-gradient(135deg, rgba(138,43,226,0.95), rgba(43,255,177,0.95)),
+        linear-gradient(rgba(255,158,61,0.6) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,158,61,0.6) 1px, transparent 1px);
+
+    background-size: cover, 20px 20px, 20px 20px;
+
+    color: #ffcc00;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+
+    border: 3px solid black;
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 14px rgba(0,0,0,0.45),
+        inset 0 0 0 2px rgba(0,0,0,0.4);
+
+    text-shadow: 2px 2px black;
+    transition: 0.25s ease;
+}
+
+.site-button:hover {
+    transform: scale(1.08) rotate(-1deg);
+    filter: brightness(1.25);
+}
+
+.site-button:active {
+    transform: scale(0.95);
+}
+
+.secret-btn {
+    position: fixed;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+
+    opacity: 0.5;              
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;      
+    cursor: pointer;
+    z-index: 9999;
+
+    transition: opacity 0.2s ease;
+}
+
+.secret-btn:hover {
+    opacity: 0.8;
+}
+
+.secret-btn.left {
+    left: 10px;
+}
+
+.secret-btn.right {
+    right: 10px;
+}
+
+.community .zjebapedia {
+  padding: 20px;
+  border: var(--border-main);
+    border-radius: 16px;
+    max-width: 300px;
+    text-align: center;
+  background-image: linear-gradient(135deg, #fff37a 0%, #ffcf33 38%, #ff8c42 100%);
+  background-size: 180% 180%;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.28);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease;
+}
+
+.community .zjebapedia:hover {
+    transform: scale(1.05) rotate(-1deg);
+  background-position: 100% 50%;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.42);
+}
+
+.news-section {
+    margin-bottom: 60px; 
+}
+
+.news-title {
+  margin-top: 42px;
+}
+
+.news-list {
+  list-style: none;
+  text-align: left;
+}
+
+.news-list strong {
+  color: var(--text-accent);
+}
+
+.news-section ul li {
+    padding: 10px;
+    border-bottom: 1px dashed rgba(255, 204, 0, 0.3);
+}
+
+.news-section ul li:last-child {
+    border-bottom: none;
+}
+
+.social-links {
+  margin-top: 16px;
+}
+
+.social-links-title {
+  margin-top: 42px;
+  font-size: clamp(32px, 5vw, 46px);
+}
+
+.meta-links {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.meta-links li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 0;
+}
+
+.meta-links span {
+  color: var(--text-accent);
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.meta-links a {
+  word-break: break-word;
+  font-size: 18px;
+  color: var(--text-main);
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 220px;
+    margin: 14px;
+    padding: 16px;
+  }
+
+  #wrapper {
+    padding: 28px;
+  }
+
+  .links {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+  }
+
+  #wrapper {
+    order: 1;
+    padding: 18px 14px;
+  }
+
+  .sidebar.left {
+    order: 2;
+  }
+
+  .sidebar.right {
+    order: 3;
+  }
+
+  .sidebar {
+    width: calc(100% - 24px);
+    margin: 10px 12px;
+    padding: 16px;
+  }
+
+  .links {
+    width: 100%;
+    margin-top: 22px;
+    padding: 18px;
+  }
+
+  .community {
+    gap: 12px;
+    margin: 14px 0 20px;
+  }
+
+  .community .discord,
+  .community .gamebanana-studio,
+  .community .zjebapedia {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .scroll-update {
+    margin-top: 10px;
+  }
+
+  .scroll-update span {
+    font-size: 17px;
+    animation-duration: 14s;
+  }
+
+  .music-control {
+    width: 100%;
+  }
+
+  #volume-slider {
+    width: min(320px, 88vw);
+  }
+}
+
+@media (max-width: 600px) {
+  * {
+    font-family: "Comic Neue", "Comic Sans MS", "Comic Sans", Arial, sans-serif;
+  }
+
+  h1 {
+    text-shadow: 2px 2px black;
+  }
+
+  p {
+    font-size: 17px;
+    margin: 14px 0;
+  }
+
+  .language-switch {
+    margin-bottom: 16px;
+  }
+
+  .language-switch button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .links h2 {
+    margin: 18px 0 10px;
+    font-size: 24px;
+  }
+
+  .news-title {
+    margin-top: 28px;
+  }
+
+  .links a {
+    font-size: 16px;
+  }
+
+  .meta-links span {
+    font-size: 14px;
+  }
+
+  .meta-links a {
+    font-size: 16px;
+  }
+
+  .news-list li {
+    font-size: 14px;
+  }
+
+  .news-section ul li {
+    padding: 8px;
+  }
+
+  .site-button {
+    font-size: 16px;
+    padding: 12px 14px;
+  }
+
+  .secret-btn {
+    width: 32px;
+    height: 32px;
+    bottom: 8px;
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 420px) {
+  #wrapper {
+    padding: 12px 8px;
+  }
+
+  .sidebar {
+    width: calc(100% - 16px);
+    margin: 8px;
+    padding: 12px;
+    border-width: 3px;
+  }
+
+  .links {
+    padding: 12px;
+    border-width: 3px;
+  }
+
+  h1 {
+    font-size: clamp(30px, 10vw, 40px);
+  }
+
+  .community {
+    gap: 10px;
+  }
+
+  .meta-links span {
+    font-size: 13px;
+  }
+
+  .meta-links a {
+    font-size: 15px;
+  }
+}
