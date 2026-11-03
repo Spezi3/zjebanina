@@ -3,350 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Index Zjebanina</title>
-<meta name="description" content="Glowna strona Zjebanina: aktualnosci, linki spolecznosciowe, projekty FNF, gry">
-<meta name="theme-color" content="#8e44ad">
-<link rel="canonical" href="https://spezi3.github.io/zjebanina/">
-<meta property="og:locale" content="pl_PL">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Zjebanina">
-<meta property="og:title" content="Index Zjebanina">
-<meta property="og:description" content="Glowna strona Zjebanina: aktualnosci, linki spolecznosciowe, projekty FNF, gry">
-<meta property="og:url" content="https://spezi3.github.io/zjebanina/">
-<meta property="og:image" content="https://spezi3.github.io/zjebanina/zjebanina.png">
-<meta property="og:image:alt" content="Zjebanina logo">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Index Zjebanina">
-<meta name="twitter:description" content="Glowna strona Zjebanina: aktualnosci, linki spolecznosciowe, projekty FNF, gry">
-<meta name="twitter:image" content="https://spezi3.github.io/zjebanina/zjebanina.png">
+<title>Zjebanina - Przebudowa</title>
+<meta name="description" content="Zjebanina - strona w przebudowie">
+<meta name="theme-color" content="#555555">
 <link rel="icon" type="image/png" href="zjebanina.png">
-<link rel="shortcut icon" href="zjebanina.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<button id="secret-left" class="secret-btn left"></button>
-<button id="secret-right" class="secret-btn right"></button>
+<div class="lang">
+    <button id="lang-pl" class="active">PL</button>
+    <button id="lang-en">EN</button>
+</div>
 
-<audio id="secret-sound">
-    <source src="secret.mp3" type="audio/mpeg">
-</audio>
+<img src="logo.png" alt="Zjebanina" class="logo">
 
-<div class="layout">
+<div class="box">
+    <div class="icon">🚧</div>
+    <h2 data-pl="STRONA W PRZEBUDOWIE" data-en="WEBSITE UNDER RECONSTRUCTION">STRONA W PRZEBUDOWIE</h2>
+    <div class="stripes"></div>
+    <p data-pl="Robimy remont strony. Stare podstrony zostały usunięte, nowa wersja jest w budowie. Wróć niedługo!"
+       data-en="We are rebuilding the website. Old subpages were removed, the new version is on the way. Come back soon!">
+        Robimy remont strony. Stare podstrony zostały usunięte, nowa wersja jest w budowie. Wróć niedługo!
+    </p>
+    <div class="progress"><div></div></div>
+</div>
 
-    <aside class="sidebar left">
-        <h2>🎤 Kubox</h2>
+<div class="box">
+    <h2 data-pl="Social Media" data-en="Social Media">Social Media</h2>
 
-        <h3>YouTube</h3>
-        <ul>
-            <li>
-                <a href="https://www.youtube.com/@kuboxfnf" target="_blank" rel="noopener noreferrer">
-                    @kuboxfnf
-                </a>
-            </li>
-        </ul>
+    <div class="cards">
+        <a href="https://discord.gg/KAjg9H9Mm7" target="_blank" rel="noopener noreferrer"
+           data-pl="💙 Nasz Discord" data-en="💙 Our Discord">💙 Nasz Discord</a>
+        <a href="https://gamebanana.com/studios/38628" target="_blank" rel="noopener noreferrer"
+           data-pl="🎨 Studio GameBanana" data-en="🎨 GameBanana Studio">🎨 Studio GameBanana</a>
+    </div>
 
-            <div class="sidebar-footer">
-            </div>
-    </aside>
+    <h3>Zjebanina</h3>
+    <ul>
+        <li>YouTube: <a href="https://www.youtube.com/@Zjebanina" target="_blank" rel="noopener noreferrer">@Zjebanina</a></li>
+        <li>X (Twitter): <a href="https://x.com/zjebanina" target="_blank" rel="noopener noreferrer">@Zjebanina</a></li>
+        <li><a href="https://youtube.com/playlist?list=PLxQfhav73V9Wts6UyI9cQc9GRZ9BCmzK7&amp;si=8QBozjtNWraqKEK1" target="_blank" rel="noopener noreferrer"
+               data-pl="Soundtrack" data-en="Soundtrack">Soundtrack</a></li>
+    </ul>
 
-    <main id="wrapper">
-
-        <div class="language-switch">
-            <button id="lang-pl" class="active">PL</button>
-            <button id="lang-en">EN</button>
-        </div>
-
-        <h1>
-            <img src="logo.png" alt="Zjebanina" class="site-logo">
-        </h1>
-
-        <p data-pl="Pamiętaj, strona nadal jest w fazie rozwijania"
-           data-en="Remember, the website is still under development">
-            Pamiętaj, strona nadal jest w fazie rozwijania
-        </p>
-
-        <div class="scroll-update">
-            <span data-pl="Ostatnia aktualizacja strony: 26.06.2026"
-                  data-en="Last website update: 26.06.2026">
-                Ostatnia aktualizacja strony: 26.06.2026
-            </span>
-        </div>
-
-        <div class="community">
-
-            <a href="winaszczura.html" class="winaszczura-link" aria-label="Wina Szczura">
-                <img src="winaszczurabutton.png" alt="Wina Szczura">
-            </a>
-
-            <a href="https://discord.gg/KAjg9H9Mm7" class="discord" target="_blank" rel="noopener noreferrer"
-               aria-label="Discord"
-               data-pl="💙 NASZA POLSKA SPOŁECZNOŚĆ NA DISCORDZIE!!!"
-               data-en="💙 OUR POLISH COMMUNITY ON DISCORD!!!">
-                💙 NASZA POLSKA SPOŁECZNOŚĆ NA DISCORDZIE!!!
-            </a>
-
-            <a href="https://gamebanana.com/studios/38628" class="gamebanana-studio" target="_blank" rel="noopener noreferrer"
-               aria-label="GameBanana"
-               data-pl="🎨 Studio GameBanana"
-               data-en="🎨 GameBanana Studio">
-                🎨 Studio GameBanana
-            </a>
-
-            <a href="zjebapedia.html" class="zjebapedia" aria-label="Zjebapedia">📖 Zjebapedia</a>
-        </div>
-
-        <h2 class="section-heading social-links-title"
-            data-pl="Social Media Zjebaniny"
-            data-en="Social Medias of Zjebanina">Social Media Zjebaniny</h2>
-        <section class="links social-links">
-            <ul class="meta-links">
-                <li>
-                    <span data-pl="YouTube"
-                          data-en="YouTube">YouTube</span>
-                    <a href="https://www.youtube.com/@Zjebanina" target="_blank" rel="noopener noreferrer">https://www.youtube.com/@Zjebanina</a>
-                </li>  
-                <li>
-                    <span data-pl="Twitter (Still nie pamiętam po chuj go posiadamy)"
-                          data-en="Twitter (I still don't remember why we have it)">Twitter (Still nie pamiętam po chuj go posiadamy)</span>
-                    <a href="https://x.com/zjebanina" target="_blank" rel="noopener noreferrer">https://x.com/zjebanina</a>
-                </li>
-                <li>
-                    <span data-pl="Strona (po chuj to tu jest skoro to jest ta strona)"
-                          data-en="Website (why this is here when we already on the website)">Strona (po chuj to tu jest skoro to jest ta strona)</span>
-                    <a href="https://spezi3.github.io/zjebanina/" target="_blank" rel="noopener noreferrer">https://spezi3.github.io/zjebanina/</a>
-                </li>
-                <li>
-                    <span data-pl="Link do SoundTracku"
-                          data-en="Soundtrack Link">Link do SoundTracku</span>
-                    <a href="https://youtube.com/playlist?list=PLxQfhav73V9Wts6UyI9cQc9GRZ9BCmzK7&amp;si=8QBozjtNWraqKEK1" target="_blank" rel="noopener noreferrer">https://youtube.com/playlist?list=PLxQfhav73V9Wts6UyI9cQc9GRZ9BCmzK7&amp;si=8QBozjtNWraqKEK1</a>
-                </li>
+    <div class="people">
+        <div class="person">
+            <h3>👽 Spezi </h3>
+            <ul>
+                <li>YouTube: <a href="https://www.youtube.com/@Spezi33" target="_blank" rel="noopener noreferrer">@Spezi33</a></li>
+                <li>YouTube: <a href="https://www.youtube.com/@SpeziWaves" target="_blank" rel="noopener noreferrer">@SpeziWaves</a></li>
+                <li>YouTube: <a href="https://www.youtube.com/@SranieZeSpezim" target="_blank" rel="noopener noreferrer">@SranieZeSpezim</a></li>
+                <li>Ko-fi: <a href="https://ko-fi.com/spezi3" target="_blank" rel="noopener noreferrer">@Spezi3</a></li>
+                <li>X (Twitter): <a href="https://x.com/Spezi333" target="_blank" rel="noopener noreferrer">@Spezi333</a></li>
+                <li>TikTok: <a href="https://www.tiktok.com/@spezi3333" target="_blank" rel="noopener noreferrer">@Spezi3333</a></li>
+                <li>TikTok: <a href="https://www.tiktok.com/@speziwaves" target="_blank" rel="noopener noreferrer">@SpeziWaves</a></li>
+                <li>TikTok: <a href="https://www.tiktok.com/@sraniezespezim" target="_blank" rel="noopener noreferrer">@SranieZeSpezim</a></li>
             </ul>
-        </section>
-
-        <h1 class="news-title" data-pl="AKTUALNOŚCI" data-en="LATEST NEWS">AKTUALNOŚCI</h1>
-
-        <div class="links news-section">
-                <ul class="news-list">
-                    <li>
-                    <strong>26.06.2026</strong><br>
-                        <span data-pl="Dziś Wyszła Wina Szczura Real V1 dlatego jest cały remake strony (to dopiero początek nadchodzi wiele zmian). i nowa pod strona WinaSzczura.html"
-                            data-en="Today Wina Szczura Real V1 was released, so the whole site is being remade (this is just the beginning, many changes are coming). And a new subpage WinaSzczura.html">
-                            Dziś Wyszła Wina Szczura Real V1 dlatego jest cały remake strony (to dopiero początek nadchodzi wiele zmian). i nowa pod strona WinaSzczura.html
-                        </span>                 
-                    <li>
-                    <strong>06.05.2026</strong><br>
-                        <span data-pl="Spezi zrobił kilka nowych modów do FNF więc dlatego jest update tej strony."
-                            data-en="Spezi made some of new FNF mods so that why is update of this website.">
-                            Spezi zrobił kilka nowych modów do FNF więc dlatego jest update tej strony.
-                        </span>
-                    <li>
-                    <strong>07.04.2026</strong><br>
-                        <span data-pl="Vs Szynszol Zostało Usunięte Przez Speziego dlatego usuneliśmy je z każdej strony i pod strony jakiej sie da oraz zrobiliśmy kilka nowych rzeczy na Zjebapedii."
-                            data-en="Vs Szynszol was removed by Spezi, so we removed it from every page and subpage we could, and we made a few new things on Zjebapedia.">
-                            Vs Szynszol Zostało Usunięte Przez Speziego dlatego usuneliśmy je z każdej strony i pod strony jakiej sie da oraz zrobiliśmy kilka nowych rzeczy na Zjebapedii.
-                        </span>
-                    </li>
-                        <li>
-                        <strong>02.04.2026</strong><br>
-                        <span data-pl="Zoptymalizowaliśmy Stronę, naprawiliśmy Bugi oraz Zmieniliśmy Wszystko z Wcale Nie Spezi na Spezi Extra ponieważ Spezi zmienił nazwe swojego kanału z Trackami i Konsolami."
-                            data-en="We optimized the website, fixed bugs, and changed everything from Not Spezi to Spezi Extra because Spezi changed the name of his channel with Tracks and Consoles.">
-                            Zoptymalizowaliśmy Stronę, naprawiliśmy Bugi oraz Zmieniliśmy Wszystko z Wcale Nie Spezi na Spezi Extra ponieważ Spezi zmienił nazwe swojego kanału z Trackami i Konsolami.
-                        </span>
-                    </li>
-                    <li>
-                        <strong>18.03.2026</strong><br>
-                        <span data-pl="Dodaliśmy media społecznościowe, poprawiliśmy błędy i kilka pomniejszych rzeczy. i dodaliśmy sekretną stronę"
-                            data-en="We added social media links, fixed bugs, and made a few minor improvements. and added a secret page">
-                            Dodaliśmy media społecznościowe, poprawiliśmy błędy i kilka pomniejszych rzeczy. i dodaliśmy sekretną stronę
-                        </span>
-                    </li>
-                    <li>
-                        <strong>22.02.2026</strong><br>
-                        <span data-pl="Uruchomienie nowej podstrony Zjebapedia! Sprawdźcie historię naszych projektów. Oraz SpeziSite.HTML gdzie Spezi daje jakieś rzeczy idc, oraz poprawiliśmy trochę rzeczy!" 
-                            data-en="Launch of the new Zjebapedia subpage! Check out our project history. Also SpeziSite.HTML where Spezi posts some stuff idc, and we fixed a few things!">
-                            Uruchomienie nowej podstrony Zjebapedia! Sprawdźcie historię naszych projektów. Oraz SpeziSite.HTML gdzie Spezi daje jakieś rzeczy idc, oraz poprawiliśmy trochę rzeczy!
-                        </span>
-                    </li>
-                    <li>
-                        <strong>19.02.2026</strong><br>
-                        <span data-pl="Oficjalne otwarcie strony Zjebanina. Witamy wszystkich!" 
-                            data-en="Official opening of the Zjebanina website. Welcome everyone!">
-                            Oficjalne otwarcie strony Zjebanina. Witamy wszystkich!
-                        </span>
-                    </li>
-                </ul>
         </div>
-        
-        
-            <h1 data-pl="Projekty" data-en="Projects">Projekty</h1>
+    </div>
+</div>
 
-        <div class="links">
-
-            <h2 data-pl="Friday Night Funkin'🎵" data-en="🎵Friday Night Funkin'🎵">Friday Night Funkin'🎵</h2>
-            
-            <ul>
-                <li><a href="https://gamebanana.com/mods/673551" target="_blank"
-                    data-pl="Vs Alf2"
-                    data-en="Vs Alf2">
-                    Vs Alf2
-                </a></li>
-
-            <ul>
-                <li><a href="https://gamebanana.com/mods/670323" target="_blank"
-                    data-pl="I Po Jajku..."
-                    data-en="I Po Jajku...">
-                    I Po Jajku...
-                </a></li>
-                        
-            <ul>
-                <li><a href="https://gamebanana.com/mods/669816" target="_blank"
-                    data-pl="Hetero Kubek!!! (One Shot)"
-                    data-en="Hetero Cup!!! (One Shot)">
-                    Hetero Kubek!!! (One Shot)
-                </a></li>
-            
-            <ul>
-                <li><a href="https://gamebanana.com/mods/654565" target="_blank"
-                    data-pl="Co Dostałeś Na Dzień Dziecka!!!"
-                    data-en="What Did You Get for Children's Day?!">
-                    Co Dostałeś Na Dzień Dziecka!!!
-                </a></li>
-
-                <li><a href="https://gamebanana.com/mods/647043" target="_blank"
-                    data-pl="Vs Spezi: Reborn"
-                    data-en="Vs Spezi: Reborn">
-                    Vs Spezi: Reborn
-                </a></li>
-
-                <li><a href="https://gamebanana.com/mods/641545" target="_blank"
-                    data-pl="Vs Naleśnik"
-                    data-en="Vs Naleśnik">
-                    Vs Naleśnik
-                </a></li>
-
-                <li><a href="https://gamebanana.com/mods/637524" target="_blank"
-                    data-pl="Mr. Egg: Reborn"
-                    data-en="Mr. Egg: Reborn">
-                    Mr. Egg: Reborn
-                </a></li>
-
-                <li><a href="https://gamebanana.com/mods/628503" target="_blank"
-                    data-pl="Vs Spezi: Anniversary 2025"
-                    data-en="Vs Spezi: Anniversary 2025">
-                    Vs Spezi: Anniversary 2025
-                </a></li>
-
-                <li><a href="https://gamebanana.com/mods/615523" target="_blank"
-                    data-pl="Vs Spezi: The Drink"
-                    data-en="Vs Spezi: The Drink">
-                    Vs Spezi: The Drink
-                </a></li>
-
-                <li><a href="https://gamebanana.com/mods/603065" target="_blank"
-                    data-pl="Vs Wina Szczura: Classic"
-                    data-en="Vs Wina Szczura: Classic">
-                    Vs Wina Szczura: Classic
-                </a></li>
-
-                <li><a href="https://gamebanana.com/mods/550391" target="_blank"
-                    data-pl="Vs Spezi: Classic"
-                    data-en="Vs Spezi: Classic">
-                    Vs Spezi: Classic
-                </a></li>
-
-                <li><a href="https://gamebanana.com/mods/450654" target="_blank"
-                    data-pl="Biedrona"
-                    data-en="Biedrona">
-                    Biedrona
-                </a></li>
+<div class="box">
+    <h2 data-pl="Aktualności/Zmiany" data-en="LATEST NEWS">AKTUALNOŚCI</h2>
+    <ul class="news">
+        <li>
+            <strong>03.11.2026</strong><br>
+            <span data-pl="Cześć jestem Spezi w skrócie nie byłem zadwolony jak wyglądała i działa ta strona i jaki rozpierdziel był w kodzie więc dlatego zajmuję sie przebudową strony. co się zmieniło:"
+                  data-en="Website reconstruction, what changed:">Cześć jestem Spezi w skrócie nie byłem zadwolony jak wyglądała i działa ta strona i jaki rozpierdziel był w kodzie więc dlatego zajmuję sie przebudową strony. co się zmieniło:</span>
+            <ul class="changes">
+                <li data-pl="Usunięte wszystkie podstrony (Wina Szczura, Zjebapedia, SpeziSite) oraz listy projektów i gier"
+                    data-en="All subpages removed (Wina Szczura, Zjebapedia, SpeziSite) along with the project and game lists">Usunięte wszystkie podstrony (Wina Szczura, Zjebapedia, SpeziSite) oraz listy projektów i gier</li>
+                <li data-pl="Nowy, szary wygląd strony (ponieważ to przebudowa)"
+                    data-en="New gray look of the website (because this is a reconstruction)">Nowy, szary wygląd strony (ponieważ to przebudowa)</li>
+                <li data-pl="Kubox nie jest więcej właścicielem Zjebaniny Dlatego został usunięty z listy social mediów"
+                    data-en="Kubox removed from the social media list">Kubox nie jest więcej właścicielem Zjebaniny Dlatego został usunięty z listy social mediów</li>
+                <li data-pl="Aktualności są teraz listą zmian na stronie"
+                    data-en="News is now a list of changes on the website">Aktualności są teraz listą zmian na stronie</li>
             </ul>
+        </li>
+        <li>
+            <strong>26.06.2026</strong><br>
+            <span data-pl="Dziś Wyszła Wina Szczura Real V1 dlatego jest cały remake strony (to dopiero początek nadchodzi wiele zmian). i nowa pod strona WinaSzczura.html"
+                  data-en="Today Wina Szczura Real V1 was released, so the whole site is being remade (this is just the beginning, many changes are coming). And a new subpage WinaSzczura.html">Dziś Wyszła Wina Szczura Real V1 dlatego jest cały remake strony (to dopiero początek nadchodzi wiele zmian). i nowa pod strona WinaSzczura.html</span>
+        </li>
+        <li>
+            <strong>06.05.2026</strong><br>
+            <span data-pl="Spezi zrobił kilka nowych modów do FNF więc dlatego jest update tej strony."
+                  data-en="Spezi made some of new FNF mods so that why is update of this website.">Spezi zrobił kilka nowych modów do FNF więc dlatego jest update tej strony.</span>
+        </li>
+        <li>
+            <strong>07.04.2026</strong><br>
+            <span data-pl="Vs Szynszol Zostało Usunięte Przez Speziego dlatego usuneliśmy je z każdej strony i pod strony jakiej sie da oraz zrobiliśmy kilka nowych rzeczy na Zjebapedii."
+                  data-en="Vs Szynszol was removed by Spezi, so we removed it from every page and subpage we could, and we made a few new things on Zjebapedia.">Vs Szynszol Zostało Usunięte Przez Speziego dlatego usuneliśmy je z każdej strony i pod strony jakiej sie da oraz zrobiliśmy kilka nowych rzeczy na Zjebapedii.</span>
+        </li>
+        <li>
+            <strong>02.04.2026</strong><br>
+            <span data-pl="Zoptymalizowaliśmy Stronę, naprawiliśmy Bugi oraz Zmieniliśmy Wszystko z Wcale Nie Spezi na Spezi Extra ponieważ Spezi zmienił nazwe swojego kanału z Trackami i Konsolami."
+                  data-en="We optimized the website, fixed bugs, and changed everything from Not Spezi to Spezi Extra because Spezi changed the name of his channel with Tracks and Consoles.">Zoptymalizowaliśmy Stronę, naprawiliśmy Bugi oraz Zmieniliśmy Wszystko z Wcale Nie Spezi na Spezi Extra ponieważ Spezi zmienił nazwe swojego kanału z Trackami i Konsolami.</span>
+        </li>
+        <li>
+            <strong>18.03.2026</strong><br>
+            <span data-pl="Dodaliśmy media społecznościowe, poprawiliśmy błędy i kilka pomniejszych rzeczy. i dodaliśmy sekretną stronę"
+                  data-en="We added social media links, fixed bugs, and made a few minor improvements. and added a secret page">Dodaliśmy media społecznościowe, poprawiliśmy błędy i kilka pomniejszych rzeczy. i dodaliśmy sekretną stronę</span>
+        </li>
+        <li>
+            <strong>22.02.2026</strong><br>
+            <span data-pl="Uruchomienie nowej podstrony Zjebapedia! Sprawdźcie historię naszych projektów. Oraz SpeziSite.HTML gdzie Spezi daje jakieś rzeczy idc, oraz poprawiliśmy trochę rzeczy!"
+                  data-en="Launch of the new Zjebapedia subpage! Check out our project history. Also SpeziSite.HTML where Spezi posts some stuff idc, and we fixed a few things!">Uruchomienie nowej podstrony Zjebapedia! Sprawdźcie historię naszych projektów. Oraz SpeziSite.HTML gdzie Spezi daje jakieś rzeczy idc, oraz poprawiliśmy trochę rzeczy!</span>
+        </li>
+        <li>
+            <strong>19.02.2026</strong><br>
+            <span data-pl="Oficjalne otwarcie strony Zjebanina. Witamy wszystkich!"
+                  data-en="Official opening of the Zjebanina website. Welcome everyone!">Oficjalne otwarcie strony Zjebanina. Witamy wszystkich!</span>
+        </li>
+    </ul>
+</div>
 
-            <h2 data-pl="🎮 GRY" data-en="🎮 GAMES">🎮 GRY</h2>
-            <ul>
-                <li><a href="https://www.roblox.com/games/16178710388/Stupid-Mine" target="_blank"
-                    data-pl="Stupid Mine (Roblox)"
-                    data-en="Stupid Mine (Roblox)">
-                    Stupid Mine (Roblox)
-                </a></li>
-
-                <li><a href="https://scratch.mit.edu/projects/1183690919/" target="_blank"
-                    data-pl="Quiz o Wszystkim i Niczym (Scratch)"
-                    data-en="A Quiz About Everything and Nothing (Scratch)">
-                    Quiz o Wszystkim i Niczym (Scratch)
-                </a></li>
-            </ul>
-
-        </div>
-
-        <div class="music-control">
-            <input type="range" id="volume-slider" min="0" max="100">
-            <span id="volume-label">🔊 100%</span>
-        </div>
-
-    </main>
-
-    <aside class="sidebar right">
-        <h2>👽 Spezi / Suzu</h2>
-
-        <h3>YouTube</h3>
-        <ul>
-            <li><a href="https://www.youtube.com/@Spezi33" target="_blank">@Spezi33</a></li>
-            <li><a href="https://www.youtube.com/@SpeziWaves" target="_blank">@SpeziWaves</a></li>
-            <li><a href="https://www.youtube.com/@s.u.z.u46" target="_blank">@S.u.z.u46</a></li>
-        </ul>
-
-        <h3>Ko-fi</h3>
-        <ul>
-            <li><a href=https://ko-fi.com/spezi3" target="_blank">@Spezi3</a></li>
-        </ul>
-
-
-        <h3>X (Twitter)</h3>
-        <ul>
-            <li><a href="https://x.com/Spezi333" target="_blank">@Spezi333</a></li>
-        </ul>
-
-        <h3>TikTok</h3>
-        <ul>
-            <li><a href="https://www.tiktok.com/@spezi3333" target="_blank">@Spezi3333</a></li>
-            <li><a href="https://www.tiktok.com/@speziwaves" target="_blank">@SpeziWaves</a></li>
-            <li><a href="https://www.tiktok.com/@suzu_spezi" target="_blank">@Suzu_Spezi</a></li>
-        </ul>
-
-
-        <div class="sidebar-footer">
-            <a href="spezisite.html" class="site-button">SpeziSite.html</a>
-        </div>
-    </aside>
-
+<div class="music">
+    <input type="range" id="volume-slider" min="0" max="100" value="100">
+    <span id="volume-label">🔊 100%</span>
 </div>
 
 <audio id="bg-music" loop>
     <source src="IndexZjebaMusic.mp3" type="audio/mpeg">
 </audio>
 
-<footer id="copyright">
-    &copy; Zjebanina 2024–2026
-</footer>
+<footer>&copy; Zjebanina 2024–2026</footer>
 
-<p class="site-created"
-   data-pl="Data założenia strony: 19.02.2026"
-   data-en="Website creation date: 19.02.2026">
-   Data założenia strony: 19.02.2026
-</p>
-
-<div class="footer-links">
-    <a href="pakistantrump.html" class="site-button secret-teaser" aria-label="PakistanTrump">PakistanTrump</a>
-</div>
+<a href="pakistantrump.html" class="hidden-link" aria-label="PakistanTrump">PakistanTrump</a>
 
 <script src="music.js" defer></script>
 <script src="script.js" defer></script>
-<script src="aio.js" defer></script>
 
 </body>
 </html>
